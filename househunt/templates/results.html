@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Search results</h1>
+{% for r  in results %}
+<div>
+  <p> {{r.title}}</p> <img src="{{ r.image_thumbnail }}" width=width-400"/></br>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<head>
+    <title>Jeffy your real estate</title>
+</head>
+{% from "_formhelpers.html" import render_field %}
+<form method="POST" action="/home">
+    <dl>
+        {{ render_field(form.select) }}
+        {{ render_field(form.search_place) }}
+        {{ render_field(form.search_description) }}
+    </dl>
+        <p><input type=submit value=Search>
+</form>
+{% endblock content %}
